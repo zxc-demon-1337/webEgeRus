@@ -1,12 +1,21 @@
+{% load static %}
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  {% block title %} {% endblock %}
+  <title>{% block title %} {% endblock %}</title>
+  <link rel="stylesheet" href="style.css">
   {% block extra_css %} {% endblock %}
 </head>
 <body>
-{% block content %} {% endblock %}
+  <nav>
+    <a href="{% url 'home' %}">Домой</a>
+  </nav>
+  <main>
+  {% block content %}{% endblock %}
+  </main>
+  
 </body>
 {% block extra_js %} {% endblock %}
 </html>

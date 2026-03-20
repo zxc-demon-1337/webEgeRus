@@ -4,10 +4,16 @@
 
 {% block extra_css %} {% endblock %}
 
-{% block body %}
-<main>
+{% block content %}
     <h1>подготовка к ЕГЭ по русскому</h1>
-
-</main>
+    <div class="main-conteiner">
+        <div class="card-home card-train">
+            <h1>Тренеровка</h1>
+            <a href="{% url 'training_home' %}">============></a>
+        </div>
+        <div class="card-home card-lessions">
+            <h1>Уроки</h1>
+        </div>
+    </div>
 {% endblock %}
 
